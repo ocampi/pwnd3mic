@@ -1,30 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="v" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#c8ff7a"/>
-      <stop offset="1" stop-color="#6fe000"/>
-    </linearGradient>
+    <!-- Recorta las aspas: huecos exteriores, centro y ranuras. -->
     <mask id="corte">
       <rect width="64" height="64" fill="#fff"/>
-      <circle cx="32" cy="14.5" r="10.2" fill="#000"/>
-      <circle cx="49.75" cy="45.25" r="10.2" fill="#000"/>
-      <circle cx="14.25" cy="45.25" r="10.2" fill="#000"/>
-      <circle cx="32" cy="35" r="7.2" fill="#000"/>
-      <g stroke="#000" stroke-width="2.6">
-        <line x1="32" y1="35" x2="32" y2="60"/>
-        <line x1="32" y1="35" x2="10.35" y2="22.5"/>
-        <line x1="32" y1="35" x2="53.65" y2="22.5"/>
+      <circle cx="32" cy="16.9" r="11.03" fill="#000"/>
+      <circle cx="47.24" cy="43.3" r="11.03" fill="#000"/>
+      <circle cx="16.76" cy="43.3" r="11.03" fill="#000"/>
+      <circle cx="32" cy="34.5" r="3.5" fill="#000"/>
+      <g stroke="#000" stroke-width="1.7">
+        <line x1="32" y1="34.5" x2="32" y2="27.2"/>
+        <line x1="32" y1="34.5" x2="38.32" y2="38.15"/>
+        <line x1="32" y1="34.5" x2="25.68" y2="38.15"/>
       </g>
     </mask>
+    <!-- El anillo solo se ve dentro de los huecos, separado de las aspas. -->
+    <clipPath id="huecos">
+      <circle cx="32" cy="16.9" r="9.6"/>
+      <circle cx="47.24" cy="43.3" r="9.6"/>
+      <circle cx="16.76" cy="43.3" r="9.6"/>
+    </clipPath>
   </defs>
   <rect width="64" height="64" rx="14" fill="#0a0d0b"/>
-  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="#9dff3a" stroke-opacity="0.22" stroke-width="1"/>
-  <g mask="url(#corte)" fill="url(#v)">
-    <circle cx="32" cy="21" r="14"/>
-    <circle cx="44.12" cy="42" r="14"/>
-    <circle cx="19.88" cy="42" r="14"/>
+  <g mask="url(#corte)" fill="#9dff3a">
+    <circle cx="32" cy="22.95" r="15.75"/>
+    <circle cx="42" cy="40.28" r="15.75"/>
+    <circle cx="22" cy="40.28" r="15.75"/>
   </g>
-  <circle cx="32" cy="35" r="10.4" fill="none" stroke="#0a0d0b" stroke-width="2.4"/>
-  <path d="M28.4 31.2l4.6 3.8-4.6 3.8" fill="none" stroke="#9dff3a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="33.8" y1="39.2" x2="37" y2="39.2" stroke="#ff3b5c" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="32" cy="34.5" r="12.34" fill="none" stroke="#9dff3a" stroke-width="3.7" clip-path="url(#huecos)"/>
+  <circle cx="32" cy="34.5" r="1.9" fill="#ff3b5c"/>
 </svg>
