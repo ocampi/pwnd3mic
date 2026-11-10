@@ -51,7 +51,7 @@ window.PWND3MIC = {
       rango: "Hacker",
       maquinas: 33,
       bio: "Nivel 60 en HTB, en la plataforma desde 2022.",
-      certs: ["CJCA"],
+      certs: ["CJCA", "ISO 27001 Lead Auditor", "NIST CSF Implementer"],
       url: "https://app.hackthebox.com/users/1083683",
       linkedin: "https://www.linkedin.com/in/ocampillay/",
     },
