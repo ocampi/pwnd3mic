@@ -24,6 +24,8 @@ window.PWND3MIC = {
 
   // Un enlace aparece en Contacto solo cuando tiene url (https://... o mailto:...).
   enlaces: [
+    { nombre: "LinkedIn de Byokii", url: "https://www.linkedin.com/in/byoki/", detalle: "Capitán del equipo" },
+    { nombre: "LinkedIn de Ch4mp1", url: "https://www.linkedin.com/in/ocampillay/", detalle: "Miembro del equipo" },
     { nombre: "Hack The Box", url: "https://app.hackthebox.com/teams/9999", detalle: "Perfil del equipo" },
     { nombre: "CTFtime", url: "", detalle: "Ranking y competencias" },
     { nombre: "GitHub", url: "", detalle: "Writeups y herramientas" },
