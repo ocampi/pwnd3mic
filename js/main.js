@@ -79,6 +79,9 @@
       el("h3", { text: m.alias }),
       el("span", { class: "rol", text: m.rol }),
       m.bio ? el("p", { text: m.bio }) : null,
+      (m.certs || []).length ? el("div", { class: "certs" }, m.certs.map(function (c) {
+        return el("span", { class: "chip cert", text: c });
+      })) : null,
       chips([m.rango, m.maquinas + " roots"]),
       perfiles.length ? el("div", { class: "perfiles" }, perfiles) : null,
     ]));

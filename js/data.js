@@ -32,14 +32,16 @@ window.PWND3MIC = {
   ],
 
   // Datos tomados de Hack The Box el 2026-11-09. "maquinas" son roots (system owns).
-  // Perfiles opcionales por miembro: url (Hack The Box), linkedin y github.
+  // Opcionales por miembro: certs (lista de certificaciones) y los perfiles
+  // url (Hack The Box), linkedin y github.
   miembros: [
     {
       alias: "Byokii",
       rol: "Capitán",
       rango: "Pro Hacker",
       maquinas: 202,
-      bio: "Nivel 107 en HTB. En la plataforma desde 2023.",
+      bio: "Sr. AppSec Engineer. Nivel 107 en HTB, en la plataforma desde 2023.",
+      certs: ["CWEE", "CAPE", "OSWE", "CPTS", "OSCP+", "eMAPT", "OSWP"],
       url: "https://app.hackthebox.com/users/1688521",
       linkedin: "https://www.linkedin.com/in/byoki/",
     },
@@ -48,7 +50,8 @@ window.PWND3MIC = {
       rol: "Miembro",
       rango: "Hacker",
       maquinas: 33,
-      bio: "Nivel 60 en HTB. En la plataforma desde 2022. Certificado HTB CJCA.",
+      bio: "Nivel 60 en HTB, en la plataforma desde 2022.",
+      certs: ["CJCA"],
       url: "https://app.hackthebox.com/users/1083683",
       linkedin: "https://www.linkedin.com/in/ocampillay/",
     },

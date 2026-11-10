@@ -182,6 +182,9 @@ a.tarjeta:hover, .tarjeta.viva:hover { transform: translateY(-3px); border-color
 .perfiles a::after { content: " ->"; }
 .perfiles a:hover { text-decoration: underline; }
 
+.certs { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip.cert { color: var(--acento); border-color: rgba(157, 255, 58, 0.3); background: var(--acento-suave); }
+
 .avatar {
   width: 52px; height: 52px; border-radius: 12px; display: grid; place-items: center;
   font-family: var(--mono); font-weight: 700; font-size: 1.2rem;
