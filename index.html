@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pwnd3mic | Equipo de CTF y pentesting</title>
+  <meta name="description" content="pwnd3mic, equipo de CTF y pentesting. Resultados, writeups y miembros.">
+  <meta name="theme-color" content="#0a0d0b">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <canvas id="red" aria-hidden="true"></canvas>
+
+  <header class="barra">
+    <a class="marca" href="#inicio" aria-label="pwnd3mic, inicio">
+      <img src="assets/logo.svg" alt="" width="28" height="28">
+      <span>pwnd<em>3</em>mic</span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#ctfs">CTFs</a>
+      <a href="#writeups">Writeups</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="portada" id="inicio">
+      <div class="portada-texto">
+        <p class="pre"><span class="punto"></span> <span id="origen">Equipo de CTF</span></p>
+        <h1>pwnd<em>3</em>mic</h1>
+        <p class="lema" id="lema"></p>
+        <div class="acciones">
+          <a class="btn btn-primario" href="#writeups">Leer writeups</a>
+          <a class="btn" href="#contacto">Contactar</a>
+        </div>
+        <dl class="cifras" id="cifras"></dl>
+      </div>
+
+      <div class="terminal" role="img" aria-label="Terminal animada que presenta al equipo">
+        <div class="terminal-barra">
+          <i></i><i></i><i></i>
+          <span>pwnd3mic@lab: ~</span>
+        </div>
+        <pre id="terminal" aria-hidden="true"></pre>
+      </div>
+    </section>
+
+    <section id="nosotros" class="bloque">
+      <header class="titulo">
+        <span class="num">01</span>
+        <h2>Nosotros</h2>
+      </header>
+      <div class="nosotros">
+        <p class="grande" id="descripcion"></p>
+        <ul class="categorias" id="categorias"></ul>
+      </div>
+    </section>
+
+    <section id="equipo" class="bloque">
+      <header class="titulo">
+        <span class="num">02</span>
+        <h2>Equipo</h2>
+      </header>
+      <div class="rejilla" id="miembros"></div>
+    </section>
+
+    <section id="ctfs" class="bloque">
+      <header class="titulo">
+        <span class="num">03</span>
+        <h2>CTFs</h2>
+      </header>
+      <div class="tabla-caja">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Fecha</th>
+              <th scope="col">Competencia</th>
+              <th scope="col">Formato</th>
+              <th scope="col" class="der">Puesto</th>
+              <th scope="col" class="der">Puntos</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-ctfs"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="writeups" class="bloque">
+      <header class="titulo">
+        <span class="num">04</span>
+        <h2>Writeups</h2>
+      </header>
+      <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoría"></div>
+      <div class="rejilla rejilla-ancha" id="lista-writeups"></div>
+    </section>
+
+    <section id="contacto" class="bloque">
+      <header class="titulo">
+        <span class="num">05</span>
+        <h2>Contacto</h2>
+      </header>
+      <p class="grande">¿Quieres jugar con nosotros, invitarnos a un CTF o conversar de seguridad? Escríbenos.</p>
+      <div class="enlaces" id="enlaces"></div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <span>pwnd<em>3</em>mic</span>
+    <span id="pie-info"></span>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
