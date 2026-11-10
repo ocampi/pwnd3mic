@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="robots" content="noindex">
+  <title>Writeups | pwnd3mic</title>
+  <meta name="theme-color" content="#0a0d0b">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="barra">
+    <a class="marca" href="index.html" aria-label="pwnd3mic, inicio">
+      <img src="assets/logo.svg" alt="" width="28" height="28">
+      <span>pwnd<em>3</em>mic</span>
+    </a>
+    <nav class="fijo" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="writeups.html" class="activo">Writeups</a>
+    </nav>
+  </header>
+
+  <main id="contenido" class="bloque writeups-pagina">
+    <!-- Candado: se muestra hasta que la contraseña descifra la bóveda. -->
+    <section id="candado" class="candado" hidden>
+      <img src="assets/logo.svg" alt="" width="64" height="64">
+      <h1>Writeups</h1>
+      <p>Esta sección es solo para el equipo. El contenido está cifrado y se abre con la contraseña.</p>
+      <form id="form-clave" autocomplete="off">
+        <label for="clave">Contraseña</label>
+        <div class="campo">
+          <input id="clave" name="clave" type="password" autocomplete="current-password" required autofocus>
+          <button class="btn btn-primario" type="submit">Abrir</button>
+        </div>
+        <p id="aviso" class="aviso" role="alert"></p>
+      </form>
+    </section>
+
+    <section id="vacio" class="candado" hidden>
+      <img src="assets/logo.svg" alt="" width="64" height="64">
+      <h1>Writeups</h1>
+      <p>Todavía no hay writeups publicados.</p>
+      <a class="btn" href="index.html">Volver al inicio</a>
+    </section>
+
+    <section id="lista" hidden>
+      <header class="titulo">
+        <span class="num">//</span>
+        <h1 class="h2">Writeups</h1>
+        <button id="cerrar" class="btn btn-chico" type="button">Cerrar sesión</button>
+      </header>
+      <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoría"></div>
+      <div class="rejilla rejilla-ancha" id="tarjetas"></div>
+    </section>
+
+    <article id="lector" class="lector" hidden>
+      <a class="volver" href="#">&lt;- Todos los writeups</a>
+      <header id="lector-cabecera"></header>
+      <div id="lector-cuerpo" class="prosa"></div>
+    </article>
+  </main>
+
+  <footer class="pie">
+    <span>pwnd<em>3</em>mic</span>
+    <span>Contenido cifrado con AES-256-GCM</span>
+  </footer>
+
+  <script src="js/writeups.js"></script>
+</body>
+</html>

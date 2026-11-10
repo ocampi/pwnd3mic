@@ -1,7 +1,7 @@
 // Contenido del sitio. Edita este archivo para actualizar la página,
 // no hace falta tocar el HTML. Lo que no tiene datos no se muestra:
-// enlaces sin url, columnas vacías de la tabla y la sección de writeups
-// mientras la lista esté vacía.
+// enlaces sin url y columnas vacías de la tabla.
+// Los writeups son privados y no van aquí: ver README.md.
 
 window.PWND3MIC = {
   equipo: {
@@ -76,16 +76,4 @@ window.PWND3MIC = {
       puesto: 6,
     },
   ],
-
-  // La sección Writeups aparece sola al agregar el primero. Formato de cada entrada:
-  //   {
-  //     titulo: "Nombre del reto o máquina",
-  //     ctf: "TRAMA CTF 2026",
-  //     categoria: "web",        // web, pwn, crypto, forensics, reversing, osint, misc...
-  //     dificultad: "media",     // fácil, media o difícil
-  //     fecha: "2026-10-24",
-  //     resumen: "Una línea: de qué fallo se partió y cómo se llegó a la flag.",
-  //     url: "https://...",      // enlace al writeup, ver writeups/PLANTILLA.md
-  //   },
-  writeups: [],
 };

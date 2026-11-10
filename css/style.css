@@ -270,3 +270,59 @@ a.enlace:hover { border-color: var(--acento); transform: translateY(-3px); }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .aparece { opacity: 1; transform: none; }
 }
+
+/* Página de writeups privados */
+.barra nav.fijo { display: flex; position: static; flex-direction: row; padding: 0; background: none; border: 0; }
+.writeups-pagina { min-height: 70vh; }
+.h2 { font-size: clamp(1.5rem, 3.6vw, 2.1rem); letter-spacing: -0.04em; line-height: 1.2; }
+.titulo .btn-chico { margin-left: auto; align-self: center; }
+.btn-chico { padding: 7px 14px; font-size: 0.8rem; cursor: pointer; color: var(--tenue); }
+
+.candado {
+  max-width: 440px; margin: clamp(24px, 8vh, 80px) auto 0; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+}
+.candado h1 { font-size: clamp(2rem, 7vw, 2.8rem); letter-spacing: -0.05em; }
+.candado p { margin: 0; color: var(--tenue); }
+.candado form { width: 100%; margin-top: 10px; text-align: left; }
+.candado label { display: block; font-family: var(--mono); font-size: 0.8rem; color: var(--tenue); margin-bottom: 6px; }
+.campo { display: flex; gap: 10px; }
+.campo input {
+  flex: 1; min-width: 0; padding: 12px 14px; border-radius: 8px;
+  border: 1px solid var(--linea); background: var(--capa); color: var(--texto);
+  font-family: var(--mono); font-size: 1rem;
+}
+.campo input:focus { outline: none; border-color: var(--acento); box-shadow: 0 0 0 3px var(--acento-suave); }
+.campo button { cursor: pointer; }
+.campo button:disabled { opacity: 0.6; cursor: progress; transform: none; }
+.aviso { min-height: 1.5em; margin-top: 10px !important; font-family: var(--mono); font-size: 0.85rem; color: var(--alerta) !important; }
+
+.lector { max-width: 780px; margin: 0 auto; }
+.volver { font-family: var(--mono); font-size: 0.85rem; color: var(--acento); text-decoration: none; }
+.volver:hover { text-decoration: underline; }
+#lector-cabecera { margin: 22px 0 30px; padding-bottom: 22px; border-bottom: 1px solid var(--linea); display: flex; flex-direction: column; gap: 12px; }
+#lector-cabecera h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); letter-spacing: -0.04em; line-height: 1.1; overflow-wrap: anywhere; }
+#lector-cabecera .meta { font-family: var(--mono); font-size: 0.8rem; color: var(--tenue); }
+#lector-cabecera .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.prosa { font-size: 1.02rem; line-height: 1.75; overflow-wrap: anywhere; }
+.prosa > * { margin: 0 0 1.1em; }
+.prosa h2, .prosa h3, .prosa h4, .prosa h5 { font-family: var(--mono); letter-spacing: -0.03em; line-height: 1.25; margin-top: 1.9em; }
+.prosa h2 { font-size: 1.45rem; }
+.prosa h3 { font-size: 1.15rem; color: var(--acento); }
+.prosa h4, .prosa h5 { font-size: 1rem; }
+.prosa em { font-style: italic; color: inherit; }
+.prosa a { color: var(--acento); }
+.prosa ul, .prosa ol { padding-left: 1.4em; }
+.prosa li { margin-bottom: 0.35em; }
+.prosa li::marker { color: var(--acento); }
+.prosa code { font-family: var(--mono); font-size: 0.88em; background: var(--capa-2); border: 1px solid var(--linea); border-radius: 5px; padding: 0.1em 0.4em; }
+.prosa pre { background: var(--capa); border: 1px solid var(--linea); border-radius: var(--radio); padding: 16px 18px; overflow-x: auto; line-height: 1.6; }
+.prosa pre code { background: none; border: 0; padding: 0; font-size: 0.86rem; white-space: pre; overflow-wrap: normal; }
+.prosa blockquote { border-left: 3px solid var(--acento); padding: 4px 0 4px 16px; color: var(--tenue); }
+.prosa img { display: block; max-width: 100%; height: auto; border: 1px solid var(--linea); border-radius: var(--radio); }
+.prosa hr { border: 0; border-top: 1px solid var(--linea); margin: 2em 0; }
+
+@media (max-width: 480px) {
+  .campo { flex-direction: column; }
+}

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>pwnd3mic | Equipo de CTF y pentesting</title>
   <meta name="description" content="pwnd3mic, equipo de CTF y pentesting. Resultados, writeups y miembros.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
   <meta name="theme-color" content="#0a0d0b">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
@@ -25,7 +26,7 @@
       <a href="#nosotros">Nosotros</a>
       <a href="#equipo">Equipo</a>
       <a href="#ctfs">CTFs</a>
-      <a href="#writeups">Writeups</a>
+      <a href="writeups.html">Writeups</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
@@ -37,8 +38,8 @@
         <h1>pwnd<em>3</em>mic</h1>
         <p class="lema" id="lema"></p>
         <div class="acciones">
-          <a class="btn btn-primario" href="#writeups">Leer writeups</a>
-          <a class="btn" href="#contacto">Contactar</a>
+          <a class="btn btn-primario" href="#ctfs">Ver resultados</a>
+          <a class="btn" href="writeups.html">Writeups del equipo</a>
         </div>
         <dl class="cifras" id="cifras"></dl>
       </div>
@@ -90,15 +91,6 @@
           <tbody id="tabla-ctfs"></tbody>
         </table>
       </div>
-    </section>
-
-    <section id="writeups" class="bloque">
-      <header class="titulo">
-        <span class="num">04</span>
-        <h2>Writeups</h2>
-      </header>
-      <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoría"></div>
-      <div class="rejilla rejilla-ancha" id="lista-writeups"></div>
     </section>
 
     <section id="contacto" class="bloque">

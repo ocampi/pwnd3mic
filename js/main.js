@@ -117,57 +117,6 @@
     document.querySelector("#ctfs thead tr").cells[i].hidden = true;
   });
 
-  /* Writeups con filtro */
-  var filtro = "todas";
-  function pintarWriteups() {
-    var caja = $("lista-writeups");
-    caja.textContent = "";
-    var lista = D.writeups.filter(function (w) {
-      return filtro === "todas" || w.categoria === filtro;
-    });
-    if (!lista.length) {
-      caja.appendChild(el("p", { class: "vacio", text: "Todavía no hay writeups en esta categoría." }));
-      return;
-    }
-    lista.forEach(function (w) {
-      var url = urlSegura(w.url);
-      var t = el(url ? "a" : "article", { class: "tarjeta visto" }, [
-        etiquetaEjemplo(w),
-        el("span", { class: "meta", text: w.ctf + " · " + w.fecha }),
-        el("h3", { text: w.titulo }),
-        el("p", { text: w.resumen }),
-        el("div", { class: "chips" }, [
-          el("span", { class: "chip", text: w.categoria }),
-          el("span", { class: "chip dif-" + w.dificultad, text: w.dificultad }),
-        ]),
-      ]);
-      if (url) enlaceExterno(t, url);
-      caja.appendChild(t);
-    });
-  }
-  // Sin writeups reales la sección no se muestra y la portada apunta a los CTFs.
-  if (!D.writeups.length) {
-    $("writeups").hidden = true;
-    nav.querySelector('a[href="#writeups"]').hidden = true;
-    var principal = document.querySelector(".btn-primario");
-    principal.textContent = "Ver resultados";
-    principal.setAttribute("href", "#ctfs");
-  }
-  var cats = ["todas"];
-  D.writeups.forEach(function (w) { if (cats.indexOf(w.categoria) < 0) cats.push(w.categoria); });
-  cats.forEach(function (c) {
-    var b = el("button", { type: "button", text: c, "aria-pressed": String(c === filtro) });
-    b.addEventListener("click", function () {
-      filtro = c;
-      Array.prototype.forEach.call($("filtros").children, function (x) {
-        x.setAttribute("aria-pressed", String(x === b));
-      });
-      pintarWriteups();
-    });
-    $("filtros").appendChild(b);
-  });
-  pintarWriteups();
-
   /* Contacto */
   D.enlaces.forEach(function (e) {
     var url = urlSegura(e.url);
