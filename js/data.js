@@ -50,6 +50,7 @@ window.PWND3MIC = {
       maquinas: 33,
       bio: "Nivel 60 en HTB. En la plataforma desde 2022. Certificado HTB CJCA.",
       url: "https://app.hackthebox.com/users/1083683",
+      linkedin: "https://www.linkedin.com/in/ocampillay/",
     },
   ],
 
