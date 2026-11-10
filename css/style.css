@@ -176,6 +176,12 @@ a.tarjeta:hover, .tarjeta.viva:hover { transform: translateY(-3px); border-color
 .tarjeta .meta { font-family: var(--mono); font-size: 0.76rem; color: var(--tenue); }
 .tarjeta .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px; }
 
+.tarjeta .chips + .perfiles { margin-top: 4px; }
+.perfiles { display: flex; flex-wrap: wrap; gap: 6px 16px; padding-top: 12px; border-top: 1px solid var(--linea); }
+.perfiles a { font-family: var(--mono); font-size: 0.82rem; color: var(--acento); text-decoration: none; padding: 4px 0; }
+.perfiles a::after { content: " ->"; }
+.perfiles a:hover { text-decoration: underline; }
+
 .avatar {
   width: 52px; height: 52px; border-radius: 12px; display: grid; place-items: center;
   font-family: var(--mono); font-weight: 700; font-size: 1.2rem;

@@ -32,6 +32,7 @@ window.PWND3MIC = {
   ],
 
   // Datos tomados de Hack The Box el 2026-11-09. "maquinas" son roots (system owns).
+  // Perfiles opcionales por miembro: url (Hack The Box), linkedin y github.
   miembros: [
     {
       alias: "Byokii",
@@ -40,6 +41,7 @@ window.PWND3MIC = {
       maquinas: 202,
       bio: "Nivel 107 en HTB. En la plataforma desde 2023.",
       url: "https://app.hackthebox.com/users/1688521",
+      linkedin: "https://www.linkedin.com/in/byoki/",
     },
     {
       alias: "Ch4mp1",

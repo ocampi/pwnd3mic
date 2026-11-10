@@ -67,17 +67,21 @@
 
   /* Equipo */
   D.miembros.forEach(function (m) {
-    var url = urlSegura(m.url);
-    var t = el(url ? "a" : "article", { class: "tarjeta aparece" }, [
+    // Cada perfil con url se muestra como un enlace al pie de la tarjeta.
+    var perfiles = [["Hack The Box", m.url], ["LinkedIn", m.linkedin], ["GitHub", m.github]]
+      .filter(function (p) { return urlSegura(p[1]); })
+      .map(function (p) {
+        return enlaceExterno(el("a", { text: p[0], "aria-label": p[0] + " de " + m.alias }), p[1]);
+      });
+    $("miembros").appendChild(el("article", { class: "tarjeta viva aparece" }, [
       etiquetaEjemplo(m),
       el("div", { class: "avatar", text: m.alias.charAt(0).toUpperCase(), "aria-hidden": "true" }),
       el("h3", { text: m.alias }),
       el("span", { class: "rol", text: m.rol }),
       m.bio ? el("p", { text: m.bio }) : null,
       chips([m.rango, m.maquinas + " roots"]),
-    ]);
-    if (url) enlaceExterno(t, url);
-    $("miembros").appendChild(t);
+      perfiles.length ? el("div", { class: "perfiles" }, perfiles) : null,
+    ]));
   });
 
   /* CTFs */
